@@ -1,0 +1,156 @@
+{% extends 'partials/base.html' %} {% load static %} {% block title %}Form Advanced{% endblock title %} {% block extra_css %}
+<link href="{% static 'libs/select2/dist/css/select2.min.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'libs/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css' %}" rel="stylesheet">
+<link href="{% static 'libs/spectrum-colorpicker2/dist/spectrum.min.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'libs/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css' %}" rel="stylesheet" /> {% endblock extra_css %} {% block content %}
+<div class="main-content">
+    <div class="page-content">
+        <!-- start page title -->
+        <div class="page-title-box">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-sm-6">
+                        <div class="page-title">
+                            <h4>Form Advanced</h4>
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Morvin</a></li>
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Forms</a></li>
+                                <li class="breadcrumb-item active">Form Advanced</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="float-end d-none d-sm-block">
+                            <a href="" class="btn btn-success">Add Widget</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end page title -->
+        <div class="container-fluid">
+            <div class="page-content-wrapper">
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+
+                                <form>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="InputNom" class="form-label">Nom</label>
+                                                <input type="text" class="form-control" id="InputNom" aria-describedby="textHelp">
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="InputOrganisation" class="form-label">Organisation</label>
+                                                <input type="text" class="form-control" id="InputOrganisation" aria-describedby="textHelp">
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label class="form-label">Étiquette</label>
+                                                <select class="select2 form-control select2-multiple" multiple="multiple" data-placeholder="Ajouter des étiquettes">
+                                                                <option value="AK">Alaska</option>
+                                                                <option value="HI">Hawaii</option>
+                                                                <option value="CA">California</option>
+                                                                <option value="NV">Nevada</option>
+                                                                <option value="OR">Oregon</option>
+                                                                <option value="WA">Washington</option>
+                                                            
+                                                        </select>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="InputTelephone" class="form-label">Téléphone</label>
+                                                <input type="tel" class="form-control" id="InputTelephone" aria-describedby="telHelp">
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="Inpute-mail" class="form-label">E-mail</label>
+                                                <input type="email" class="form-control" id="Inpute-mail" aria-describedby="emailHelp">
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label class="form-label">Propiétaire</label>
+                                                <select class="form-control select2-search-disable">
+                                                                
+                                                                    <option value="AK">Alaska</option>
+                                                                    <option value="HI">Hawaii</option>
+                                                                    <option value="CA">California</option>
+                                                                    <option value="NV">Nevada</option>
+                                                                    <option value="OR">Oregon</option>
+                                                                    <option value="WA">Washington</option>
+                                                  </select>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="InputNom" class="form-label">Nom</label>
+                                                <input type="text" class="form-control" id="InputNom" aria-describedby="textHelp">
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="InputNom" class="form-label">Chiffre d'affaire</label>
+                                                <input type="tel" class="form-control" id="InputNom" aria-describedby="textHelp">
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="InputNom" class="form-label">Aircall Tags</label>
+                                                <input type="text" class="form-control" id="InputNom" aria-describedby="textHelp">
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+                                        <!-- <div class="col-lg-6">
+                                            <div class="mb-0">
+                                                <label class="form-label">Search Disable</label>
+                                                <select class="form-control select2-search-disable">
+                                                                <option>Select</option>
+                                                                    <option value="AK">Alaska</option>
+                                                                    <option value="HI">Hawaii</option>
+                                                                    <option value="CA">California</option>
+                                                                    <option value="NV">Nevada</option>
+                                                                    <option value="OR">Oregon</option>
+                                                                    <option value="WA">Washington</option>
+                                                  </select>
+                                            </div>
+                                        </div> -->
+
+                                    </div>
+
+
+
+
+
+
+
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- end select2 -->
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+    <!-- container-fluid -->
+</div>
+<!-- End Page-content -->
+{% endblock content %} {% block extra_javascript %}
+<script src="{% static 'libs/select2/dist/js/select2.min.js' %}"></script>
+<script src="{% static 'libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js' %}"></script>
+<script src="{% static 'libs/spectrum-colorpicker2/dist/spectrum.min.js' %}"></script>
+<script src="{% static 'libs/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js' %}"></script>
+<script src="{% static 'libs/bootstrap-maxlength/dist/bootstrap-maxlength.min.js' %}"></script>
+<script src="{% static 'js/pages/form-advanced.init.js' %}"></script>
+{% endblock extra_javascript %}
